@@ -1,0 +1,12 @@
+# Lazımsız və ağır qovluq
+node_modules/
+
+# Sistem tərəfindən yaradılan müvəqqəti fayllar
+.DS_Store
+Thumbs.db
+
+# VS Code-un daxili nizamlamaları
+.vscode/
+
+# Log faylları
+*.log
