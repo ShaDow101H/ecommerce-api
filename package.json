@@ -1,17 +1,28 @@
 {
   "name": "ecommerce-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "Bu layihə Node.js və MySQL istifadə edilərək hazırlanmış bir e-ticarət backend layihəsidir.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "bcrypt": "^6.0.0",
     "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
     "mysql2": "^3.22.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShaDow101H/ecommerce-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ShaDow101H/ecommerce-api/issues"
+  },
+  "homepage": "https://github.com/ShaDow101H/ecommerce-api#readme"
 }
