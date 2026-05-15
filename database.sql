@@ -1,13 +1,24 @@
--- use ecommerce_db;
-ALTER TABLE categories 
-ADD COLUMN image_data LONGBLOB;
-UPDATE categories 
-SET image_data = LOAD_FILE('C:/image.jpg') 
-WHERE id = 1;
-SELECT id, name, LENGTH(image_data) FROM categories;
-SHOW VARIABLES LIKE "secure_file_priv";
-UPDATE categories 
-SET image_data = LOAD_FILE('C:\ProgramData\MySQL\MySQL Server 8.0\Uploads\image.jpg') 
-WHERE id = 1;
-SELECT * FROM categories;
-SELECT id, name, LENGTH(image_data) FROM categories WHERE id = 1;
+-- create database ecommerce_db1;
+-- use ecommerce_db1;
+-- CREATE TABLE categories (
+--     id INT AUTO_INCREMENT PRIMARY KEY,
+--     name VARCHAR(100) NOT NULL
+-- );
+
+CREATE TABLE products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(150) NOT NULL,
+    price DECIMAL(10,2) NOT NULL,
+    category_id INT NOT NULL,
+    FOREIGN KEY (category_id) REFERENCES categories(id)
+);
+
+
+-- INSERT INTO categories (name)
+-- VALUES ('Phones'), ('Laptops'), ('Tablets');
+
+INSERT INTO products (name, price, category_id)
+VALUES
+('iPhone 14', 1800, 1),
+('Samsung Galaxy S23', 1500, 1),
+('Lenovo ThinkPad', 2200, 2);

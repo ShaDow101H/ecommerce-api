@@ -160,4 +160,4 @@ exports.login = (req, res) => {
             }
         });
     });
-};
+}

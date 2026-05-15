@@ -1,10 +1,10 @@
 const express = require("express");
 const categoryRoutes = require("./routes/categoryRoutes");
 const authRoutes = require("./routes/authRoutes");
-//const productRoutes = require("./routes/productRoutes");
+const productRoutes = require("./routes/productRoutes");
 
 const app = express();
-const PORT = 3000;
+
 
 app.use(express.json());
 app.use((req, res, next) => {
@@ -19,8 +19,10 @@ app.get("/", (req, res) => {
 
 app.use("/categories", categoryRoutes);
 app.use("/", authRoutes);
-//app.use("/products", productRoutes);
+app.use("/products", productRoutes);
 
+
+const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
