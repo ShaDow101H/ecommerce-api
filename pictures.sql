@@ -1,5 +1,5 @@
-create database photo_db;
-use photo_db;
+CREATE DATABASE photo_db;
+USE photo_db;
 
 CREATE TABLE innovation_firms (
     uid INT PRIMARY KEY AUTO_INCREMENT,
@@ -11,12 +11,11 @@ CREATE TABLE innovation_firms (
     official_site VARCHAR(255),
     brand_logo VARCHAR(500)
 );
-
 INSERT INTO innovation_firms
 (company_title, main_office, launch_year, valuation_billion_usd, official_site, brand_logo)
 VALUES
-("Stripe", "San Francisco, California", 2010, 65.00, "stripe.com", "https://logo.clearbit.com/stripe.com"),
-("SpaceX", "Hawthorne, California", 2002, 180.00, "spacex.com", "https://logo.clearbit.com/spacex.com"),
-("Airbnb", "San Francisco, California", 2008, 75.00, "airbnb.com", "https://logo.clearbit.com/airbnb.com"),
-("Spotify", "Stockholm, Sweden", 2006, 40.00, "spotify.com", "https://logo.clearbit.com/spotify.com"),
-("Shopify", "Ottawa, Canada", 2006, 85.00, "shopify.com", "https://logo.clearbit.com/shopify.com");
+("OpenAI", "San Francisco, California", 2015, 86.00, "openai.com", "https://logo.clearbit.com/openai.com"),
+("Netflix", "Los Gatos, California", 1997, 240.00, "netflix.com", "https://logo.clearbit.com/netflix.com"),
+("Uber", "San Francisco, California", 2009, 145.00, "uber.com", "https://logo.clearbit.com/uber.com"),
+("Zoom", "San Jose, California", 2011, 18.50, "zoom.us", "https://logo.clearbit.com/zoom.us"),
+("Figma", "San Francisco, California", 2012, 12.00, "figma.com", "https://logo.clearbit.com/figma.com");
